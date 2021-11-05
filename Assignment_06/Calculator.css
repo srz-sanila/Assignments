@@ -1,0 +1,46 @@
+.main{
+    width: 310px;
+    padding: 10px 50px 25px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-family: raleway;
+    float:left;
+    margin-top:50px;
+    margin-left: 50px;
+    background-color: rgb(204, 252, 252);
+}
+
+.table-grid{
+    width: 300px;
+    height: 400px;
+}
+
+input[type="button"]
+{
+background-color:rgb(4, 110, 4);
+color: white;
+border: solid black 2px;
+width:90%;
+height: 75%;
+border-radius: 5px;
+font-size: larger;
+}
+
+input[type="button"]:hover{
+    background-color: chartreuse;
+    color: black;
+    padding-left: 2px;
+}
+
+input[type="text"]
+{
+background-color:white;
+border: solid black 2px;
+width:90%;
+height: 75%;
+border-radius: 5px;
+font-size: larger;
+}
+.final{
+    width:25%;
+}
