@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="DragAndDrop.css">
+        <script src="DragAndDrop.js"></script>
+    </head>
+    <body>
+            
+        <div class="grid-half">
+
+
+            <div class="half" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                <div class="items" draggable="true" ondragstart="drag(event)" id="one" style="background-color: red;">1</div>
+
+                <div class="items" draggable="true" ondragstart="drag(event)" id="two" style="background-color: blue;">2</div>
+
+                <div class="items" draggable="true" ondragstart="drag(event)" id="three" style="background-color: yellow;">3</div>
+
+            </div>
+
+            <div class="half" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                <div class="items" draggable="true" ondragstart="drag(event)" id="four" style="background-color: cyan;">4</div>
+
+                <div class="items" draggable="true" ondragstart="drag(event)" id="five" style="background-color: white;">5</div>
+
+                <div class="items" draggable="true" ondragstart="drag(event)" id="six" style="background-color: pink;">6</div>
+
+                <img src="camping.jpg" draggable="true" ondragstart="drag(event)" id="drag1" height="200px" width="300px">
+            
+            </div>
+
+        </div>  
+            
+    </body>
+    
+</html>
