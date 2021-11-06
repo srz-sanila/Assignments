@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+	<style>
+		.ui-datepicker {
+			width: 12em;
+		}
+		h1{
+			color:green;
+		}
+        #datepicker{
+            margin-top: 50px;
+        }
+	</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+	<div>
+		<h1>Date Picker</h1>
+		From : <input type="text" id="from" placeholder="Click to select the date" style="margin-right: 13px;">
+		To : <input type="text" id="to" placeholder="Click to select the date" style="margin-right: 13px;">
+        <button id="btn" name ="btn">OK</button>
+        <br>
+        <div id="result"></div>
+		
+		<script>
+			$(document).ready(function() {
+
+				$(function() {
+					$("#from").datepicker({
+                        changeMonth: true,
+                        changeYear: true
+                    });
+				});
+
+				$(function() {
+					$("#to").datepicker({
+                        changeMonth: true,
+                        changeYear: true
+                    });
+				});
+
+				$('#from').change(function() {
+					startDate = $(this).datepicker('getDate');
+					$("#to").datepicker("option", "minDate", startDate);
+                    
+				})
+
+				$('#to').change(function() {
+					endDate = $(this).datepicker('getDate');
+					$("#from").datepicker("option", "maxDate", endDate);
+				})
+
+                $('#btn').on('click',function() {
+                    var months;
+                    //alert("start : "+startDate+" end : "+endDate);
+                    months = (endDate.getFullYear() - startDate.getFullYear()) * 12;
+                    months -= startDate.getMonth();
+                    months += endDate.getMonth();
+                    var m= months <= 0 ? 0 : months;
+                    //alert("The difference between two dates is: " + m);
+                    $('#result').datepicker('destroy');
+                    $( function() {
+                        var numberOfMonths = "";
+                      $( "#result" ).datepicker({
+						  	defaultDate : startDate,
+                            numberOfMonths: m+1
+                        })
+                    })    
+                })    
+			})
+		</script>
+	</div>
+</body>
+
+</html>
+
