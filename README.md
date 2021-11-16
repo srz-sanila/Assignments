@@ -10,3 +10,4 @@ Assignment-09 : Autocomplete on an input field.
 Assignment-10 : Modal popup.
 Assignment-11 : Tic-Tac-Toe game.
 Assignment-12 : Display calendar between two dates using datepicker.
+Assignment-13 : RTL
